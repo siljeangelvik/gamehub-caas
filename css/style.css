@@ -14,6 +14,7 @@
 
 /* Mobile first approach */
 body {
+    font-family: "Roboto",sans-serif;
     min-width: 300px;
     margin: 0 auto; /* Center align once max-width is reached */
     padding: 5px 10px;
@@ -292,7 +293,7 @@ footer div i.circle-up-desktop {
     }
     section.flex > :last-child {
         max-width: 48%;
-        margin: 0; /* No margin for last child */
+        margin-right: 0; /* No margin for last child */
     }
     section.row {
         max-width: 640px;
@@ -388,7 +389,7 @@ footer div i.circle-up-desktop {
         width: 33.33%;
     }
     section.flex > :last-child {
-        margin: 0; /* No margin for last child */
+        right-margin: 0; /* No margin for last child */
     }
     section.row {
         max-width: 640px;
