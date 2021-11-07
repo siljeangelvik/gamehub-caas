@@ -283,7 +283,7 @@ footer div i.circle-up-desktop {
 
     section.flex {
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         gap: 10px;
     }
 
@@ -332,7 +332,7 @@ footer div i.circle-up-desktop {
       "row-a . . ."
       "flex-a flex-a flex-a"
       "row-b . . ."
-      "flex-b  flex-b flex-b"
+      "flex-b flex-b flex-b"
       "bottom bottom bottom bottom";
     }
 
@@ -389,7 +389,7 @@ footer div i.circle-up-desktop {
         width: 33.33%;
     }
     section.flex > :last-child {
-        right-margin: 0; /* No margin for last child */
+        margin-right: 0; /* No margin for last child */
     }
     section.row {
         max-width: 640px;
