@@ -1,0 +1,399 @@
+:root {
+    --bgBlack: #333;
+    --fgBlack: #2b2b2b;
+    --activeWhite: #fff;
+    --offWhite: #e7e7e7;
+    --green: #40e2a0;
+    --purple: MediumPurple;
+}
+
+* {
+    box-sizing: border-box;
+    /* border: 1px solid white;/**/
+}
+
+/* Mobile first approach */
+body {
+    min-width: 300px;
+    margin: 0 auto; /* Center align once max-width is reached */
+    padding: 5px 10px;
+    display: grid;
+    color: var(--activeWhite);
+    background-color: var(--bgBlack);
+    grid-template-areas:
+    "top"
+    "hero"
+    "row-a"
+    "flex-a"
+    "row-b"
+    "flex-b"
+    "bottom";
+}
+
+p {
+    color: var(--offWhite);
+}
+
+header {
+    grid-area: top;
+}
+section#hero {
+    grid-area: hero;
+}
+section.row-a {
+    grid-area: row-a;
+}
+section.flex-a {
+    grid-area: flex-a;
+}
+
+section.row-b {
+    grid-area: row-b;
+}
+section.flex-b {
+    grid-area: flex-b;
+}
+
+
+
+
+footer {
+    grid-area: bottom;
+}
+
+header {
+    margin: 5px 0;
+    position: relative;
+}
+
+img.logo {
+    height: 42px;
+}
+
+nav {
+    display: none; /* By default hide the menu */
+}
+
+#hamburger-menu {
+    display: none; /* Hide checkbox */
+}
+
+#hamburger-menu:checked ~ nav {
+    display: block; /* Display nav block when checkbox is checked only */
+}
+
+label[for="hamburger-menu"] {
+    font-size: 2em;
+    position: absolute; /* header is relative */
+    right: 0;
+    top: 10px;
+}
+
+/* Style the menu itself */
+header nav ul {
+    background-color: var(--fgBlack);
+    list-style-type: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    position: absolute;
+    z-index: 3;
+}
+header nav ul li {
+    margin: 10px 20px 10px 20px;
+    border-radius: 5px;
+}
+
+header nav ul li:nth-child(6) {
+    background-color: var(--green);
+    margin-top: 30px;
+}
+
+header nav ul li:last-child {
+    margin-bottom: 0;
+    border: 1px solid var(--activeWhite);
+}
+
+header nav ul li a {
+    text-decoration: none;
+    padding: 15px 5px 15px 5px;
+    color: var(--activeWhite);
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+header nav ul li a.active {
+    background-color: var(--purple);
+    color: var(--fgBlack);
+}
+
+header nav ul li a:hover {
+    background-color: var(--purple);
+    color: var(--fgBlack);
+}
+
+section#hero {
+    position: relative;
+}
+
+section#hero img {
+    width: 100%;
+}
+
+section#hero > div.center {
+    position: absolute;
+    width: 240px;
+    color: white;
+    padding: 20px;
+    bottom: 50px;
+    left: 20px;
+}
+
+section.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+section.flex > * {
+    border-radius: 10px;
+    background-color: var(--fgBlack);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 0 0 10px 0;
+}
+section.flex div.card,
+div.card > * {
+    padding: 10px;
+}
+
+section.flex div.card div.card-top {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+section.flex div.card div.card-top > * {
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+section.flex div.card div.card-top p {
+    /* might remove this */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+section.flex div.card div.card-top p:last-of-type {
+    font-weight: bolder;
+}
+
+section.flex div.card img {
+    width: 100%;
+    height: auto;
+}
+
+section.flex div.card div.card-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.flex div.card div.card-buttons a {
+    width: 47.5%;
+    text-align: center;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: var(--green);
+    color: var(--activeWhite);
+    font-weight: bold;
+}
+
+section.flex div.card div.card-buttons a:first-child {
+    width: 60%;
+}
+
+section.flex div.card div.card-buttons a:last-child {
+    background-color: var(--purple);
+    border-radius: 5px;
+    width: 33%;
+}
+
+footer {
+    margin: 10px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer > * {
+    flex: 100%;
+    padding: 10px 0;
+}
+
+footer a {
+    color: var(--activeWhite);
+    text-decoration: none;
+}
+footer > :last-child {
+    text-align: center;
+}
+
+footer div.icons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0;
+}
+
+footer div i.circle-up-mobile {
+    width: 70%;
+    text-align: right;
+    font-size: 2em;
+}
+
+footer div i.circle-up-desktop {
+    display: none;
+    text-align: right;
+    font-size: 2em;
+}
+
+.fa-facebook-f,
+.fa-instagram,
+.fa-linkedin-in,
+.fa-twitter {
+    font-size: 1.7em;
+}
+
+/* For mid sized screens */
+@media (min-width: 640px) {
+    body {
+        max-width: 900px; /* Demo-purposes only */
+    }
+    header img#logo {
+        height: 72px;
+    }
+
+
+    section.flex {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    section.flex > * {
+        margin-right: 10px;
+        width: 33.33%;
+    }
+    section.flex > :last-child {
+        max-width: 48%;
+        margin: 0; /* No margin for last child */
+    }
+    section.row {
+        max-width: 640px;
+    }
+
+    section.flex div.card div.card-buttons a {
+        text-align: center;
+        padding: 10px;
+    }
+
+    section.flex div.card div.card-buttons a:first-child {
+        width: 70%;
+    }
+
+    section.flex div.card div.card-buttons a:last-child {
+        width: 25%;
+    }
+
+    footer > * {
+        flex: 50%;
+        padding: 10px 10px 10px 0;
+    }
+    footer > :last-child {
+        padding: 10px 0 10px 10px;
+    }
+
+}
+
+/* For wider screens */
+@media (min-width: 1024px) {
+    body {
+        max-width: 1280px;
+        grid-template-areas:
+      "top    top    top    top"
+      "hero   hero   hero   hero"
+      "row-a . . ."
+      "flex-a flex-a flex-a"
+      "row-b . . ."
+      "flex-b  flex-b flex-b"
+      "bottom bottom bottom bottom";
+    }
+
+
+
+    label[for="hamburger-menu"] {
+        display: none;
+    }
+    header nav {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 20px;
+    }
+    header nav ul {
+        list-style-type: none; /**/
+        display: inline-block; /**/
+        padding-left: 0; /**/
+    }
+    header nav li {
+        float: left; /**/
+        margin-right: 10px; /**/
+    }
+    header nav li a {
+        text-decoration: none; /**/
+        width: 120px; /**/
+        display: inline-block; /**/
+        padding: 2px 5px; /**/
+        text-align: center; /**/
+    }
+    header nav li:last-child {
+        margin-right: 0; /**/
+    }
+
+    section#hero {
+        margin-bottom: 50px;
+    }
+
+    section.info {
+        margin: 0 10px;
+    }
+
+    section.info > h2 {
+        margin-top: 0;
+    }
+    section.flex {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+        margin: 10px 0;
+    }
+    section.flex > * {
+        margin-right: 10px;
+        width: 33.33%;
+    }
+    section.flex > :last-child {
+        margin: 0; /* No margin for last child */
+    }
+    section.row {
+        max-width: 640px;
+    }
+    section.row > h2 {
+        margin-top: 6px;
+    }
+}
