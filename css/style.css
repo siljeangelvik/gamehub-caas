@@ -262,10 +262,10 @@ footer {
 footer div.icons {
     display: flex;
     justify-content: space-evenly;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
-footer div:last-child {
+footer div:last-of-type {
     margin: 20px 0 0 0;
     text-align: center;
     font-size: 13px;
@@ -331,7 +331,7 @@ footer div:last-child {
     }
 
     footer div.icons a {
-        font-size: 1em;
+        font-size: 1.8rem;
     }
 
     footer div.icons a:hover {
