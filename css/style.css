@@ -170,16 +170,16 @@ header nav ul {
     align-items: center;
     flex-grow: 1;
     row-gap: 30px;
-    margin: 5px 0 0 0;
+    margin: 0;
     right: 0;
-    width: 96vw;
-    height: 94vh;
+    width: 50%;
+    height: 95vh;
     position: absolute;
     z-index: 3;
 }
 
 header nav ul li {
-    width: 80%;
+    width: 60%;
     border-radius: 5px;
 }
 
@@ -199,7 +199,7 @@ header nav ul li:nth-child(-n+5):hover > a, header nav ul li.active > a, i.fa-he
 
 /* selecting last 2 li elements */
 header nav ul li:nth-last-child(-n+2) {
-    width: 90%;
+    width: 70%;
 }
 
 section#hero {
