@@ -1,18 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Homepage - GameHub</title>
+    <title>The Universe of Games - GameHub</title>
     <meta name="description"
-          content="Welcome to the universe of GameHub, where you save money on your favorite activity.">
+          content="Welcome to the Universe of GameHub, where you save and earn money on your favorite activity.">
 
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- external stylesheets.
-    the fontawesome is not locally downloaded,
-    and therefore it gives me an error of bad value for attribute.
-    I choose to let it be, because I do not want to download the whole library of icons -->
+    <!-- external stylesheets. -->
     <script src="https://kit.fontawesome.com/183e136a7d.js" crossorigin="anonymous"></script>
     <link rel="icon"
           type="image/svg+xml"
@@ -28,34 +25,32 @@
 <body>
 <header>
     <a href="index.html" id="back-to-top">
-        <img src="https://raw.githubusercontent.com/NoroffFEU/first-year-cross-course-assignment-brief-three/master/GameHub_Logo.png"
+        <img src="assets/images/logo-white.svg"
              alt="website logo for gamehub" class="logo">
     </a>
-    <!-- Note: Uses Font Awesome 5 for hamburger icon -->
     <label for="hamburger-menu">
         <i class="fas fa-bars"></i>
     </label>
     <input type="checkbox" id="hamburger-menu">
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="pre-order.html">Pre Order</a></li>
-            <li><a href="new-games.html">New Games</a></li>
-            <li><a href="used-games.html">Used Games</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">Log in</a></li>
-            <li><a href="signup.html">Sign up</a></li>
-
+            <li class="active btn"><a href="index.html">Home</a></li>
+            <li class="btn"><a href="pre-order.html">Pre Order</a></li>
+            <li class="btn"><a href="new-games.html">New Games</a></li>
+            <li class="btn"><a href="used-games.html">Used Games</a></li>
+            <li class="btn"><a href="contact.html">Contact</a></li>
+            <li class="btn btn-tertiary"><a href="login.html">Log in</a></li>
+            <li class="btn btn-primary"><a href="signup.html">Sign up</a></li>
         </ul>
     </nav>
 </header>
 
 <section id="hero">
     <picture>
-        <source srcset="https://cdn.pixabay.com/photo/2021/09/07/07/11/game-console-6603120_1280.jpg"
+        <source srcset="assets/images/banner.jpeg"
                 media="(max-width: 640px)">
-        <img src="https://cdn.pixabay.com/photo/2021/09/07/07/11/game-console-6603120_1280.jpg"
-             alt="hero - need better alt text">
+        <img src="assets/images/banner.jpeg"
+             alt="header image displaying a variety of gaming consoles">
     </picture>
     <div class="center">
         <h1>GameHub</h1>
@@ -73,10 +68,10 @@
 <section class="products flex flex-a">
     <div class="card">
         <div class="card-top">
-            <p>Subcategory</p>
+            <p>Shooter</p>
             <p>499NOK</p>
         </div>
-        <img src="https://cdn.pixabay.com/photo/2016/06/24/10/47/house-1477041_1280.jpg" alt="card product">
+        <img src="assets/images/fortnite-dark-optimized.jpg" alt="card product">
         <div class="card-content">
             <h3>Fortnite</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae exercitationem dolor ducimus, eos
@@ -84,17 +79,17 @@
                 eligendi voluptate minus?</p>
         </div>
         <div class="card-buttons">
-            <a href="#">View product</a>
-            <a href="#"><i class="fas fa-cart-plus"></i></a>
+            <a href="pages/fortnite.html" class="btn btn-secondary">View product</a>
+            <a href="#" class="btn btn-primary"><i class="fas fa-cart-plus"></i></a>
         </div>
     </div>
 
     <div class="card">
         <div class="card-top">
-            <p>Subcategory</p>
+            <p>Shooter</p>
             <p>499NOK</p>
         </div>
-        <img src="https://cdn.pixabay.com/photo/2016/06/24/10/47/house-1477041_1280.jpg" alt="card product">
+        <img src="assets/images/fortnite-light-optimized.jpg" alt="card product">
         <div class="card-content">
             <h3>Fortnite</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae exercitationem dolor ducimus, eos
@@ -102,17 +97,17 @@
                 eligendi voluptate minus?</p>
         </div>
         <div class="card-buttons">
-            <a href="#">View product</a>
-            <a href="#"><i class="fas fa-cart-plus"></i></a>
+            <a href="pages/fortnite.html" class="btn btn-secondary">View product</a>
+            <a href="#" class="btn btn-primary"><i class="fas fa-cart-plus"></i></a>
         </div>
     </div>
 
     <div class="card">
         <div class="card-top">
-            <p>Subcategory</p>
+            <p>Shooter</p>
             <p>449NOK</p>
         </div>
-        <img src="https://cdn.pixabay.com/photo/2016/06/24/10/47/house-1477041_1280.jpg" alt="card product">
+        <img src="assets/images/fortnite-dark-optimized.jpg" alt="card product">
         <div class="card-content">
             <h3>Fortnite</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae exercitationem dolor ducimus, eos
@@ -120,15 +115,15 @@
                 eligendi voluptate minus?</p>
         </div>
         <div class="card-buttons">
-            <a href="#">View product</a>
-            <a href="#"><i class="fas fa-cart-plus"></i></a>
+            <a href="pages/fortnite.html" class="btn btn-secondary">View product</a>
+            <a href="#" class="btn btn-primary"><i class="fas fa-cart-plus"></i></a>
         </div>
     </div>
 </section>
 
 
 <section class="info row row-b">
-    <h2>All games</h2>
+    <h2>Other games</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, odit officiis hic non harum, iste quam iure
         tenetur temporibus enim aliquam, rem voluptate cupiditate eaque perspiciatis? Nam consectetur molestiae
         voluptatibus?</p>
@@ -138,27 +133,9 @@
     <div class="card">
         <div class="card-top">
             <p>Shooter</p>
-            <p>449NOK</p>
-        </div>
-        <img src="https://cdn.pixabay.com/photo/2016/06/24/10/47/house-1477041_1280.jpg" alt="card product">
-        <div class="card-content">
-            <h3>Fortnite</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae exercitationem dolor ducimus, eos
-                tempora qui sunt consectetur aspernatur vel illum placeat facere eveniet ad reprehenderit odit mollitia
-                eligendi voluptate minus?</p>
-        </div>
-        <div class="card-buttons">
-            <a href="#">View product</a>
-            <a href="#"><i class="fas fa-cart-plus"></i></a>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-top">
-            <p>Shooter</p>
             <p>499NOK</p>
         </div>
-        <img src="https://cdn.pixabay.com/photo/2016/06/24/10/47/house-1477041_1280.jpg" alt="card product">
+        <img src="assets/images/cod-optimized.jpg" alt="product image of cod vanguard">
         <div class="card-content">
             <h3>COD Vanguard</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae exercitationem dolor ducimus, eos
@@ -166,8 +143,8 @@
                 eligendi voluptate minus?</p>
         </div>
         <div class="card-buttons">
-            <a href="#">View product</a>
-            <a href="#"><i class="fas fa-cart-plus"></i></a>
+            <a href="pages/cod.html" class="btn btn-secondary">View product</a>
+            <a href="#" class="btn btn-primary"><i class="fas fa-cart-plus"></i></a>
         </div>
     </div>
 
@@ -176,7 +153,7 @@
             <p>Shooter</p>
             <p>699NOK</p>
         </div>
-        <img src="https://cdn.pixabay.com/photo/2016/06/24/10/47/house-1477041_1280.jpg" alt="card product">
+        <img src="assets/images/valorant-optimized.jpeg" alt="product image of valorant">
         <div class="card-content">
             <h3>Valorant</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae exercitationem dolor ducimus, eos
@@ -184,8 +161,8 @@
                 eligendi voluptate minus?</p>
         </div>
         <div class="card-buttons">
-            <a href="#">View product</a>
-            <a href="#"><i class="fas fa-cart-plus"></i></a>
+            <a href="pages/valorant.html" class="btn btn-secondary">View product</a>
+            <a href="#" class="btn btn-primary"><i class="fas fa-cart-plus"></i></a>
         </div>
     </div>
 
@@ -195,7 +172,7 @@
             <p>Open World</p>
             <p>199NOK</p>
         </div>
-        <img src="https://cdn.pixabay.com/photo/2016/06/24/10/47/house-1477041_1280.jpg" alt="card product">
+        <img src="assets/images/skyrim-optimized.jpg" alt="card product">
         <div class="card-content">
             <h3>Skyrim</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae exercitationem dolor ducimus, eos
@@ -203,56 +180,69 @@
                 eligendi voluptate minus?</p>
         </div>
         <div class="card-buttons">
-            <a href="#">View product</a>
-            <a href="#"><i class="fas fa-cart-plus"></i></a>
+            <a href="pages/skyrim.html" class="btn btn-secondary">View product</a>
+            <a href="#" class="btn btn-primary"><i class="fas fa-cart-plus"></i></a>
         </div>
     </div>
 </section>
 
 
+
+
 <footer>
     <div>
         <a href="index.html">
-            <img src="https://raw.githubusercontent.com/NoroffFEU/first-year-cross-course-assignment-brief-three/master/GameHub_Logo.png"
+            <img src="assets/images/logo-red.svg"
                  alt="website logo for gamehub" class="logo">
         </a>
         <p>
-            <a href="https://www.google.com/maps/place/Kanalveien+88,+5068+Bergen/@60.3618437,5.3448018,17z/data=!3m1!4b1!4m5!3m4!1s0x463cf941087a92d5:0x32b707bf61b0b146!8m2!3d60.3618423!4d5.3459963"><i
-                    class="fas fa-map-pin"></i> Norway, Bergen, Kanalveien 44</a></p>
+            <a target="_blank"
+               href="https://www.google.com/maps/place/Kanalveien+88,+5068+Bergen/@60.3618437,5.3448018,17z/data=!3m1!4b1!4m5!3m4!1s0x463cf941087a92d5:0x32b707bf61b0b146!8m2!3d60.3618423!4d5.3459963">
+                <i class="fas fa-map-marker-alt"></i>
+                Bergen, Kanalveien 88
+            </a>
+        </p>
 
-        <p><a href="mailto:example@example.com"><i class="fas fa-envelope"></i> John@doe.com</a></p>
-        <p><a href="tel:+47 000 00 000"><i class="fas fa-phone"></i> +00 123 45 678</a>
+        <p>
+            <a target="_blank" href="mailto:example@example.com">
+                <i class="fas fa-envelope"></i>
+                John@doe.com
+            </a>
+        </p>
+        <p>
+            <a target="_blank" href="tel:+47 000 00 000">
+                <i class="fas fa-phone"></i>
+                +00 123 45 678
+            </a>
         </p>
 
     </div>
-    <div class="icons">
 
-        <a href="#">
-            <i class="fab fa-facebook-f"></i>
-        </a>
 
-        <a href="#">
-            <i class="fab fa-instagram"></i>
-        </a>
+        <div class="icons">
 
-        <a href="#">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
+            <a target="_blank" href="https://facebook.com">
+                <i class="fab fa-facebook-f"></i>
+            </a>
 
-        <a href="#">
-            <i class="fab fa-twitter"></i>
-        </a>
+            <a target="_blank" href="https://instagram.com">
+                <i class="fab fa-instagram"></i>
+            </a>
 
-    </div>
+            <a target="_blank" href="https://linkedin.com">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a target="_blank" href="https://twitter.com">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
 
     <div>
-        Developed with ❤ by Angelvik ©2021 - All rights reserved.
-
+        Developed with <i class="fas fa-heart"></i> by Angelvik ©2021 - All rights reserved.
     </div>
 
-    <!--
-       <a href="#back-to-top"><i class="fas fa-arrow-alt-circle-up "></i></a>
--->
+
 
 </footer>
 

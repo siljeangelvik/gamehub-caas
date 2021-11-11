@@ -17,7 +17,7 @@ current project are small enough to not needing variables, but again: I thought 
 
     ---btn-textColor: #fff;
     --btn-primary: Red;
-    --btn-secondary: #444;
+    --btn-secondary: transparent;
     --btn-tertiary: transparent;
 }
 
