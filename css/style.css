@@ -1,26 +1,40 @@
+/*
+current variables for future light/dark mode toggle, might be useless but I thought it was fun
+made variables for buttons for fun and sticking to DRY principle.
+current project are small enough to not needing variables, but again: I thought it was fun
+*/
 :root {
-    --bgBlack: #333;
-    --fgBlack: #2b2b2b;
-    --activeWhite: #fff;
-    --offWhite: #e7e7e7;
-    --green: #40e2a0;
-    --purple: MediumPurple;
+    /* dark mode */
+    --bgDark: #2b2b2b;
+    --fgDark: #333;
+    --textColorHeading-dark: #e0e5ec;
+    --textColor-dark: LightGray;
+
+    /* light mode */
+    --bgLight: #e0e5ec;
+    --textColorHeading-light: #333;
+    --textColor-light: #666;
+
+    ---btn-textColor: #fff;
+    --btn-primary: Red;
+    --btn-secondary: #444;
+    --btn-tertiary: transparent;
 }
 
 * {
     box-sizing: border-box;
-    /* border: 1px solid white;/**/
+    /* border:1px solid red;
+     /**/
 }
 
-/* Mobile first approach */
 body {
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto", sans-serif;
     min-width: 300px;
-    margin: 0 auto; /* Center align once max-width is reached */
+    margin: 0 auto;
     padding: 5px 10px;
     display: grid;
-    color: var(--activeWhite);
-    background-color: var(--bgBlack);
+    color: var(--textColor-dark);
+    background-color: var(--bgDark);
     grid-template-areas:
     "top"
     "hero"
@@ -31,35 +45,84 @@ body {
     "bottom";
 }
 
-p {
-    color: var(--offWhite);
-}
-
 header {
     grid-area: top;
 }
+
 section#hero {
     grid-area: hero;
 }
+
 section.row-a {
     grid-area: row-a;
-}
-section.flex-a {
-    grid-area: flex-a;
+    margin: 30px 0;
 }
 
 section.row-b {
     grid-area: row-b;
+    margin: 30px 0;
 }
+
+section.flex-a {
+    grid-area: flex-a;
+}
+
 section.flex-b {
     grid-area: flex-b;
 }
 
-
-
+section.flex-a, section.flex-b {
+    display: inline-flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap:20px;
+}
 
 footer {
     grid-area: bottom;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: .1rem;
+    font-family: "Roboto", sans-serif;
+    color: var(--textColorHeading-dark);
+}
+
+footer div a, p {
+    color: var(--textColor-dark);
+}
+
+footer div a i, nav li a {
+    color: var(---btn-textColor);
+}
+
+.btn, header nav ul {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: -7px -7px 20px 0 #2b2b2b,
+    -4px -4px 5px 0 #3b3b3b,
+    7px 7px 25px 0 #0001,
+    2px 2px 10px 0 #0002;
+    color: var(---btn-textColor);
+}
+
+.btn-primary {
+    border-color: var(--btn-primary);
+    background-color: var(--btn-primary);
+    color: var(---btn-textColor);
+}
+
+.btn-secondary {
+    border-color: var(--btn-secondary);
+    background-color: var(--btn-secondary);
+}
+
+.btn-tertiary {
+    border: 1px solid var(--textColor-dark);
+    background-color: var(--btn-tertiary);
 }
 
 header {
@@ -68,81 +131,82 @@ header {
 }
 
 img.logo {
-    height: 42px;
+    height: 52px;
 }
 
 nav {
-    display: none; /* By default hide the menu */
+    display: none;
 }
 
 #hamburger-menu {
-    display: none; /* Hide checkbox */
+    display: none;
 }
 
 #hamburger-menu:checked ~ nav {
-    display: block; /* Display nav block when checkbox is checked only */
+    display: block;
 }
 
 label[for="hamburger-menu"] {
+    z-index: 5;
     font-size: 2em;
-    position: absolute; /* header is relative */
+    position: absolute;
     right: 0;
     top: 10px;
 }
 
-/* Style the menu itself */
+label[for="hamburger-menu"]:hover {
+    cursor: pointer;
+}
+
 header nav ul {
-    background-color: var(--fgBlack);
+    background-color: var(--bgDark);
     list-style-type: none;
-    display: inline-block;
-    padding: 0;
-    margin: 0;
+    padding-top: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    row-gap: 30px;
+    margin: 5px 0 0 0;
     right: 0;
-    width: 60%;
-    height: 100vh;
+    width: 96vw;
+    height: 94vh;
     position: absolute;
     z-index: 3;
 }
+
 header nav ul li {
-    margin: 10px 20px 10px 20px;
+    width: 80%;
     border-radius: 5px;
 }
 
-header nav ul li:nth-child(6) {
-    background-color: var(--green);
-    margin-top: 30px;
-}
-
-header nav ul li:last-child {
-    margin-bottom: 0;
-    border: 1px solid var(--activeWhite);
-}
-
 header nav ul li a {
+    padding: 10px;
     text-decoration: none;
-    padding: 15px 5px 15px 5px;
-    color: var(--activeWhite);
-    font-weight: bold;
-    display: block;
     text-align: center;
 }
 
-header nav ul li a.active {
-    background-color: var(--purple);
-    color: var(--fgBlack);
+/*
+select 5 first li elements which on hover, change color of direct a-tags
+select all li elements with classname active, set color on direct a-tag
+ */
+header nav ul li:nth-child(-n+5):hover > a, header nav ul li.active > a, i.fa-heart {
+    color: var(--btn-primary);
 }
 
-header nav ul li a:hover {
-    background-color: var(--purple);
-    color: var(--fgBlack);
+/* selecting last 2 li elements */
+header nav ul li:nth-last-child(-n+2) {
+    width: 90%;
 }
 
 section#hero {
     position: relative;
 }
 
-section#hero img {
-    width: 100%;
+img {
+    max-width: 100%;
+
 }
 
 section#hero > div.center {
@@ -154,175 +218,73 @@ section#hero > div.center {
     left: 20px;
 }
 
-section.flex {
-    display: flex;
-    flex-direction: column;
-}
-
-section.flex > * {
-    border-radius: 10px;
-    background-color: var(--fgBlack);
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    margin: 0 0 10px 0;
-}
-section.flex div.card,
-div.card > * {
-    padding: 10px;
+section.flex-a div.card,
+section.flex-b div.card {
+    max-width: 400px;
+    padding: 0 10px 20px 10px;
+    border-radius: 8px;
+    background-color: var(--fgDark);
+    box-shadow: -7px -7px 20px 0 #2b2b2b,
+    -4px -4px 5px 0 #2b2b3b,
+    7px 7px 25px 0 #0001,
+    2px 2px 10px 0 #0006;
 }
 
 section.flex div.card div.card-top {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    text-transform: uppercase;
-}
-
-section.flex div.card div.card-top > * {
-    margin: 0;
-    display: inline-block;
-    text-align: center;
-}
-
-section.flex div.card div.card-top p {
-    /* might remove this */
-    padding: 10px;
-    border-radius: 5px;
-}
-
-section.flex div.card div.card-top p:last-of-type {
     font-weight: bolder;
 }
 
-section.flex div.card img {
-    width: 100%;
-    height: auto;
-}
 
 section.flex div.card div.card-buttons {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
 }
 
-section.flex div.card div.card-buttons a {
-    width: 47.5%;
-    text-align: center;
-    padding: 12px;
-    border-radius: 5px;
-    text-decoration: none;
-    background-color: var(--green);
-    color: var(--activeWhite);
-    font-weight: bold;
-}
-
 section.flex div.card div.card-buttons a:first-child {
-    width: 60%;
+    width: 43%;
 }
 
 section.flex div.card div.card-buttons a:last-child {
-    background-color: var(--purple);
-    border-radius: 5px;
-    width: 33%;
+    width: 53%;
 }
 
 footer {
     margin: 10px 0;
     padding: 10px 0;
     display: flex;
-    flex-wrap: wrap;
-}
-footer > * {
-    flex: 100%;
-    padding: 10px 0;
+    flex-direction: column;
 }
 
-footer a {
-    color: var(--activeWhite);
-    text-decoration: none;
-}
-footer > :last-child {
-    text-align: center;
-}
 
 footer div.icons {
     display: flex;
     justify-content: space-evenly;
-    padding: 50px 0;
+    font-size: 1.5em;
 }
 
-footer div i.circle-up-mobile {
-    width: 70%;
-    text-align: right;
-    font-size: 2em;
+footer div:last-child {
+    margin: 20px 0 0 0;
+    text-align: center;
 }
 
-footer div i.circle-up-desktop {
-    display: none;
-    text-align: right;
-    font-size: 2em;
-}
 
-.fa-facebook-f,
-.fa-instagram,
-.fa-linkedin-in,
-.fa-twitter {
-    font-size: 1.7em;
-}
-
-/* For mid sized screens */
+/* For tablet/mid sized screens */
 @media (min-width: 640px) {
-    body {
-        max-width: 900px; /* Demo-purposes only */
-    }
-    header img#logo {
-        height: 72px;
+    header img.logo {
+        height: 62px;
     }
 
-
-    section.flex {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    section.flex > * {
-        margin-right: 10px;
-        width: 33.33%;
-    }
-    section.flex > :last-child {
-        max-width: 48%;
-        margin-right: 0; /* No margin for last child */
-    }
     section.row {
         max-width: 640px;
     }
 
-    section.flex div.card div.card-buttons a {
-        text-align: center;
-        padding: 10px;
-    }
-
-    section.flex div.card div.card-buttons a:first-child {
-        width: 70%;
-    }
-
-    section.flex div.card div.card-buttons a:last-child {
-        width: 25%;
-    }
-
-    footer > * {
-        flex: 50%;
-        padding: 10px 10px 10px 0;
-    }
-    footer > :last-child {
-        padding: 10px 0 10px 10px;
-    }
-
 }
 
-/* For wider screens */
+/* For desktop/wide screens */
 @media (min-width: 1024px) {
     body {
         max-width: 1280px;
@@ -336,65 +298,49 @@ footer div i.circle-up-desktop {
       "bottom bottom bottom bottom";
     }
 
-
-
     label[for="hamburger-menu"] {
         display: none;
     }
-    header nav {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 20px;
-    }
-    header nav ul {
-        list-style-type: none; /**/
-        display: inline-block; /**/
-        padding-left: 0; /**/
-    }
-    header nav li {
-        float: left; /**/
-        margin-right: 10px; /**/
-    }
-    header nav li a {
-        text-decoration: none; /**/
-        width: 120px; /**/
-        display: inline-block; /**/
-        padding: 2px 5px; /**/
-        text-align: center; /**/
-    }
-    header nav li:last-child {
-        margin-right: 0; /**/
-    }
 
-    section#hero {
-        margin-bottom: 50px;
-    }
-
-    section.info {
-        margin: 0 10px;
-    }
-
-    section.info > h2 {
-        margin-top: 0;
-    }
-    section.flex {
-        flex-direction: row;
+    header {
+        min-width: 1024px;
+        display: flex;
         flex-wrap: nowrap;
-        gap: 10px;
-        margin: 10px 0;
+        column-gap: 50px;
     }
-    section.flex > * {
-        margin-right: 10px;
-        width: 33.33%;
+
+    header nav {
+        min-width: 1024px;
+        display: flex;
     }
-    section.flex > :last-child {
-        margin-right: 0; /* No margin for last child */
+
+    header nav ul {
+        box-shadow: none;
+        position: relative;
+        min-width: 1024px;
+        max-height: 80px;
+        padding: 2px 0 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        column-gap: 15px;
     }
-    section.row {
-        max-width: 640px;
+
+    header nav ul li:nth-child(5) {
+        margin-right: 20px;
     }
-    section.row > h2 {
-        margin-top: 6px;
+
+    footer div.icons a {
+        font-size: 1em;
     }
+
+    footer div.icons a:hover {
+        font-size: 1.05em;
+        display: block;
+        background: -webkit-linear-gradient(var(--btn-primary), var(--textColor-dark));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+
 }
