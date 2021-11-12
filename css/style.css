@@ -1,0 +1,340 @@
+/*
+current variables for future light/dark mode toggle, might be useless but I thought it was fun
+made variables for buttons for fun and sticking to DRY principle.
+current project are small enough to not needing variables, but again: I thought it was fun
+*/
+:root {
+    /* dark mode */
+    --bgDark: #2b2b2b;
+    --fgDark: #333;
+    --textColorHeading-dark: #e0e5ec;
+    --textColor-dark: LightGray;
+
+    /* light mode */
+    --bgLight: #e0e5ec;
+    --textColorHeading-light: #333;
+    --textColor-light: #666;
+
+    ---btn-textColor: #fff;
+    --btn-primary: Red;
+    --btn-secondary: transparent;
+    --btn-tertiary: transparent;
+}
+
+* {
+    box-sizing: border-box;
+    /* border:1px solid red; /**/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: .1rem;
+    font-family: "Roboto", sans-serif;
+    color: var(--textColorHeading-dark);
+}
+
+footer div a, p {
+    color: var(--textColor-dark);
+}
+
+footer div a i, nav li a {
+    color: var(---btn-textColor);
+}
+
+.btn, header nav ul {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: -7px -7px 20px 0 #2b2b2b,
+    -4px -4px 5px 0 #3b3b3b,
+    7px 7px 25px 0 #0001,
+    2px 2px 10px 0 #0002;
+    color: var(---btn-textColor);
+}
+
+.btn-primary {
+    border-color: var(--btn-primary);
+    background-color: var(--btn-primary);
+    color: var(---btn-textColor);
+}
+
+.btn-secondary {
+    border-color: var(--btn-secondary);
+    background-color: var(--btn-secondary);
+}
+
+.btn-tertiary {
+    border: 1px solid var(--textColor-dark);
+    background-color: var(--btn-tertiary);
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Roboto", sans-serif;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    color: var(--textColor-dark);
+    background-color: var(--bgDark);
+}
+
+header,
+section.breadcrumbs-section,
+section#hero,
+section.row,
+section.flex,
+footer {
+    flex: 1 100%;
+}
+
+.row {
+    flex: 1;
+}
+
+.flex {
+    flex: 2;
+}
+
+header {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+img.logo {
+    height: 72px;
+}
+
+nav {
+    display: none;
+}
+
+#hamburger-menu {
+    display: none;
+    position: absolute;
+}
+
+#hamburger-menu:checked ~ nav {
+    display: block;
+    position: absolute;
+    top: 1%;
+    right: 56%;
+}
+
+label[for="hamburger-menu"] {
+    z-index: 5;
+    font-size: 2em;
+    right: 0;
+}
+
+label[for="hamburger-menu"]:hover {
+    cursor: pointer;
+}
+
+header nav ul {
+    background-color: var(--bgDark);
+    position: absolute;
+    list-style-type: none;
+    padding-top: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    row-gap: 30px;
+    width: 55vw;
+    height: 98vh;
+    z-index: 3;
+}
+
+header nav ul li {
+    width: 60%;
+    border-radius: 5px;
+}
+
+header nav ul li a {
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*
+select 5 first li elements which on hover, change color of direct a-tags
+select all li elements with classname active, set color on direct a-tag
+ */
+header nav ul li:nth-child(-n+5):hover > a, header nav ul li.active > a, i.fa-heart {
+    color: var(--btn-primary);
+}
+
+/* selecting last 2 li elements */
+header nav ul li:nth-last-child(-n+2) {
+    width: 70%;
+}
+
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: var(--bgDark);
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li + li:before {
+    padding: 8px;
+    color: #fff;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #888;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: var(--btn-primary);
+    text-decoration: underline;
+}
+
+section#hero {
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+}
+
+section#hero > div.center {
+    position: absolute;
+    width: 240px;
+    color: white;
+    padding: 20px;
+    bottom: 50px;
+    left: 50px;
+}
+
+section.flex-a,
+section.flex-b,
+section.flex-c {
+display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+
+
+section.flex-a div.card,
+section.flex-b div.card,
+section.flex-c div.card {
+    max-width: 400px;
+    padding: 0 10px 20px 10px;
+    border-radius: 8px;
+    background-color: var(--fgDark);
+    box-shadow: -7px -7px 20px 0 #2b2b2b,
+    -4px -4px 5px 0 #2b2b3b,
+    7px 7px 25px 0 #0001,
+    2px 2px 10px 0 #0006;
+    margin: auto;
+}
+
+section.flex div.card div.card-top {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+
+section.flex div.card div.card-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+section.flex div.card div.card-buttons a:first-child {
+    width: 43%;
+}
+
+section.flex div.card div.card-buttons a:last-child {
+    width: 53%;
+}
+
+footer {
+    margin: 10px 0 0 0;
+    padding: 10px 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+footer div:first-child {
+    justify-content: left;
+}
+
+footer div.icons {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+}
+
+footer div:last-child {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+
+/* For tablet/mid sized screens */
+@media (min-width: 640px) {
+    body {
+        max-width: 640px;
+    }
+}
+
+/* For desktop/wide screens */
+@media (min-width: 1024px) {
+    body {
+        max-width: 1240px;
+    }
+
+    label[for="hamburger-menu"] {
+        display: none;
+    }
+
+    header {
+        column-gap: 35px;
+        max-height: 100px;
+        align-items: center;
+    }
+
+    header nav {
+        width: 100%;
+        display: flex;
+    }
+
+    header nav ul {
+        box-shadow: none;
+        position: relative;
+        max-height: 10px;
+        flex-direction: row;
+        column-gap: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer div.icons a {
+        font-size: 1.8rem;
+    }
+
+    footer div.icons a:hover {
+        font-size: 1.05em;
+        display: block;
+        background: -webkit-linear-gradient(var(--btn-primary), var(--textColor-dark));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
