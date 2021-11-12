@@ -16,7 +16,8 @@
 RESOURCES <br>
 
 - Font Awesome Gradient:
+<br>https://codepen.io/ismailfarooq/pen/wewNxx
 
-https://codepen.io/ismailfarooq/pen/wewNxx
 
-- 
+- Lightbox effect
+<br> https://codepen.io/gschier/pen/HCoqh

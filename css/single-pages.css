@@ -1,0 +1,52 @@
+
+body {
+    height: 100vh;
+    grid-template-areas:
+    "top"
+    "hero"
+    ""
+    "flex-c"
+    "bottom";
+}
+
+section.row-c img {
+    display: none;
+}
+
+section.flex-c img {
+    display: block;
+}
+
+
+/* For tablet/mid sized screens */
+@media (min-width: 640px) {
+
+    body {
+        max-width: 640px;
+        grid-template-areas:
+      "top top top top"
+      ". row-c . flex-c"
+      "bottom bottom bottom bottom";
+    }
+
+    section.flex-c img {
+        display: none;
+    }
+    section.row-c img {
+        display: block;;
+    }
+}
+
+/* For desktop/wide screens */
+@media (min-width: 1024px) {
+    body {
+        max-width: 1240px;
+        grid-template-areas:
+      "top    top    top    top"
+      "hero   hero   hero   hero"
+      "row-c row-c flex-c flex-c"
+      "bottom bottom bottom bottom";
+    }
+
+
+}
