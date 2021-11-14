@@ -21,3 +21,7 @@ RESOURCES <br>
 
 - Lightbox effect
 <br> https://codepen.io/gschier/pen/HCoqh
+
+
+- Back to previous page
+<br> https://www.computerhope.com/issues/ch000317.htm

@@ -26,9 +26,17 @@ current project are small enough to not needing variables, but again: I thought 
     /* border:1px solid red; /**/
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h5, h6 {
     letter-spacing: .1rem;
     font-family: "Roboto", sans-serif;
+    font-weight: bolder;
+    color: var(--textColorHeading-dark);
+}
+
+h4 {
+    letter-spacing: .1rem;
+    font-family: "Roboto Light", sans-serif;
+    font-weight: lighter;
     color: var(--textColorHeading-dark);
 }
 
@@ -70,8 +78,6 @@ footer div a i, nav li a {
 }
 
 body {
-    display: flex;
-    flex-wrap: wrap;
     font-family: "Roboto", sans-serif;
     min-width: 300px;
     margin: 0 auto;
@@ -174,7 +180,6 @@ header nav ul li:nth-last-child(-n+2) {
     width: 70%;
 }
 
-
 ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
@@ -212,26 +217,43 @@ img {
 
 section#hero > div.center {
     position: absolute;
-    width: 240px;
     color: white;
-    padding: 20px;
-    bottom: 50px;
-    left: 50px;
+    top: 50%;
+    right: 15%;
+    transform: translate(5%, -50%);
+    font-size: 1.2rem;
+    width: 500px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+section#hero > div.center h1 {
+    margin: 0;
+    padding: 90px 0 15px 10px;
+    letter-spacing: .2rem;
+}
+
+section#hero > div.center p {
+    margin: 0;
+    padding: 0 0 0 10px;
+    font-weight: lighter;
+}
+
+section.row {
+    padding: 20px 0;
 }
 
 section.flex-a,
 section.flex-b,
 section.flex-c {
-display: flex;
+    display: flex;
     flex-wrap: wrap;
     row-gap: 20px;
 }
 
 
-
 section.flex-a div.card,
-section.flex-b div.card,
-section.flex-c div.card {
+section.flex-b div.card {
     max-width: 400px;
     padding: 0 10px 20px 10px;
     border-radius: 8px;
@@ -285,7 +307,6 @@ footer div:last-child {
     text-align: center;
     margin-top: 40px;
 }
-
 
 
 /* For tablet/mid sized screens */

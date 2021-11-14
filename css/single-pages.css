@@ -1,43 +1,119 @@
-
-body {
-   display: flex;
+main {
+    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    padding: 20px 0 20px 0;
 }
 
 section.row-c {
+    background: url("../assets/images/cod.jpg") center top no-repeat;
+    background-size: cover;
+    min-height: 30vh;
+}
+
+section.flex-c div.card {
+    background-color: transparent;
+}
+
+
+section.flex-c div.card div.card-buttons {
+    padding: 20px 0 0 0;
+}
+
+/* probably bad practice, I honestly don´t know. Using for prototyping purpose */
+form input.btn-previous {
+    font-family: FontAwesome, 'Roboto', Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    box-shadow: -7px -7px 20px 0 #2b2b2b,
+    -4px -4px 5px 0 #3b3b3b,
+    7px 7px 25px 0 #0001,
+    2px 2px 10px 0 #0002;
+    color: var(---btn-textColor);
+    background-color: var(--bgDark);
+    border-radius: 5px;
+    border: none;
+    width: 70px;
+    padding: 11px;
+}
+
+/* need js for this */
+div.btn-box-js {
     display: none;
 }
 
-section.flex-c img {
-    display: block;
-}
-
-/* For tablet/mid sized screens */
+/* tablet */
 @media (min-width: 640px) {
-
-    body {
+    main {
         max-width: 640px;
-        flex-wrap: wrap;
     }
 
-    section.flex-c img {
-        display: none;
-    }
-    section.row-c {
-        display: block;
+    section.row-cod {
+        background: url("../assets/images/cod.jpg") center top no-repeat;
+        background-size: cover;
+        min-height: 35vh;
     }
 
-    section.row-c,
-    section.flex-c {
-        max-width: 50vw;
+    section.row-valorant {
+        background: url("../assets/images/valorant.jpeg") center top no-repeat;
+        background-size: cover;
+        min-height: 35vh;
+    }
+
+    section.row-skyrim {
+        background: url("../assets/images/skyrim.jpg") center top no-repeat;
+        background-size: cover;
+        min-height: 35vh;
+    }
+
+    section.row-fortnite {
+        background: url("../assets/images/fortnite-light.jpg") center top no-repeat;
+        background-size: cover;
+        min-height: 35vh;
+    }
+
+    section.flex-c div.card {
+        background-color: transparent;
+        padding: 0 10px 0 10px;
+        border-radius: 8px;
+        box-shadow: none;
+        margin: 0;
     }
 }
 
-/* For desktop/wide screens */
+/* desktop */
 @media (min-width: 1024px) {
-    body {
+    main {
         max-width: 1240px;
+        flex-direction: row;
+    }
+
+    section.row-cod {
+        background: url("../assets/images/cod.jpg") center top no-repeat;
+        background-size: contain;
+        min-height: 35vh;
+        border: 1px solid red;
+    }
+
+    section.row-valorant {
+        background: url("../assets/images/valorant.jpeg") center top no-repeat;
+        background-size: cover;
+        min-height: 35vh;
+    }
+
+    section.row-skyrim {
+        background: url("../assets/images/skyrim.jpg") center top no-repeat;
+        background-size: cover;
+        min-height: 35vh;
+    }
+
+    section.row-fortnite {
+        background: url("../assets/images/fortnite-light.jpg") center top no-repeat;
+        background-size: cover;
+        min-height: 35vh;
+    }
+
+    section.flex-c div.card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
