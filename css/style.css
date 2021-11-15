@@ -392,9 +392,12 @@ li.btn-account-primary a.nav-account-icons {
     padding: 0 20px 0 20px;
 }
 
-h1.h1-account {
+h1.h1-center {
+    padding: 50px 0 10px 0;
+}
+h1.h1-center,
+h2.h2-center{
     text-align: center;
-    padding: 50px 0 20px 0;
 }
 
 section.row-account {
@@ -595,6 +598,21 @@ section form ul li:last-child a {
 section.shopping-bag {
     display: flex;
     flex-direction: row;
+    background-color: var(--fgDark);
+    border-radius: 5px;
+    box-shadow: -7px -7px 20px 0 #2b2b2b,
+    -4px -4px 5px 0 #2b2b3b,
+    4px 4px 25px 0 #0001,
+    2px 2px 10px 0 #0006;
+    padding: 25px;
+    margin: 10px 0;
+}
+
+div.shopping-cart-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 input.product-quantity,
@@ -630,8 +648,8 @@ div.checkout-section {
     border-radius: 5px;
     box-shadow: -7px -7px 20px 0 #2b2b2b,
     -4px -4px 5px 0 #2b2b3b,
-     4px 4px 25px 0 #0001,
-     2px 2px 10px 0 #0006;
+    4px 4px 25px 0 #0001,
+    2px 2px 10px 0 #0006;
     padding: 25px;
 }
 
