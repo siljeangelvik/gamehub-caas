@@ -3,14 +3,16 @@
 
 //TODO
 - 
-- Make Login and Signup pages
+- Homepage:
+Fix the hero heading
+- Contact, Signup and Login:
+Fix the form to be centered on desktop view
+- Game specific pages:
+Make section.flex-c space-between value work.
+
 - Make Account Page
 - Make Checkout and Checkout Success pages
 - Make Add to Cart ?
-
-
-- header item(5) break too soon..
-
 
 
 RESOURCES <br>
