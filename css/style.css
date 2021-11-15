@@ -297,13 +297,11 @@ footer div:last-child {
 input {
     box-shadow: -7px -7px 20px 0 #2b2b2b, -4px -4px 5px 0 #2b2b3b,
     7px 7px 25px 0 #0001, 2px 2px 10px 0 #0006;
-    width: 95%;
     color: var(--textColor-dark);
     border: 1px solid transparent;
     border-radius: 5px;
     background-color: var(--fgDark);
     padding: 15px 10px;
-    transition: 0.5s;
     outline: 0;
 }
 
@@ -399,7 +397,7 @@ h1.h1-account {
     padding: 50px 0 20px 0;
 }
 
-section.row-account{
+section.row-account {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -479,7 +477,7 @@ div.account-footer {
 }
 
 div.account-footer a.flex {
-   width: 330px;
+    width: 330px;
 }
 
 img.account-footer-logo {
@@ -495,8 +493,6 @@ div.account-footer a {
 div.account-footer a i {
     padding: 5px 0;
 }
-
-
 
 
 /**//**//*//**//* FORM PAGES  STYLING *//**//**//*//**/
@@ -549,14 +545,13 @@ textarea {
     border: 1px solid transparent;
     border-radius: 5px;
     background-color: var(--fgDark);
+    margin: 20px;
     padding: 15px 10px;
-    transition: 0.5s;
     outline: none;
 }
 
 input:focus,
 textarea:focus {
-    width: 50%;
     box-shadow: -7px -7px 20px 0 #2b2b2b,
     -4px -4px 5px 0 #2b2b3b,
     inset 4px 4px 25px 0 #0001,
@@ -594,6 +589,70 @@ section form ul li:last-child,
 section form ul li:last-child a {
     color: var(---btn-textColor);
     text-align: right;
+}
+
+/* SHOPPING CART PAGE */
+section.shopping-bag {
+    display: flex;
+    flex-direction: row;
+}
+
+input.product-quantity,
+label.product-quantity {
+    height: 50px;
+    width: 60px;
+}
+
+.checkout-img img {
+    text-align: center;
+    width: 170px;
+}
+
+
+/* CHECKOUT PAGE */
+section.checkout-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+section.checkout-section {
+    text-align: center;
+}
+
+div.checkout-section {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    background-color: var(--fgDark);
+    border-radius: 5px;
+    box-shadow: -7px -7px 20px 0 #2b2b2b,
+    -4px -4px 5px 0 #2b2b3b,
+     4px 4px 25px 0 #0001,
+     2px 2px 10px 0 #0006;
+    padding: 25px;
+}
+
+div.checkout-row {
+    display: flex;
+    flex-direction: row;
+}
+
+div.checkout-payment-icons {
+    display: flex;
+    flex-direction: row;
+    justify-items: baseline;
+}
+
+div.checkout-payment-icons i {
+    font-size: 2.3em;
+    padding: 15px;
+}
+
+div.order-details {
+    justify-content: space-between;
 }
 
 
@@ -654,11 +713,16 @@ section form ul li:last-child a {
         -webkit-text-fill-color: transparent;
     }
 
+    .checkout-img,
     section.row-game-details div.row-cod,
     section.row-game-details div.row-valorant,
     section.row-game-details div.row-skyrim,
     section.row-game-details div.row-fortnite {
         background-size: cover;
         /* max-width: 50%; /**/
+    }
+
+    section.checkout-section {
+        flex-direction: row;
     }
 }
