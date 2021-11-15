@@ -660,12 +660,14 @@ div.success-box {
 
 /*finish */
 div.box-card,
-.flex-btn-box{
-    padding: 25px;
+.flex-btn-box {
+    padding: 50px;
     display: flex;
     flex-direction: column;
 }
-
+.flex-btn-box {
+    padding: 50px 0;
+}
 
 div.row-success-circle i {
     color: var(--btn-primary);
