@@ -51,97 +51,113 @@
     </nav>
 </header>
 
-<h1 class="h1-center">Checkout</h1>
-<h2 class="h2-center">Billing details</h2>
+<h1 class="h1-center">Payment successful</h1>
 
-<section class="row checkout-section">
-    <div class="row checkout-section">
+<section class="flex flex-section">
+    <div class=" flex success-box box-card">
+        <h2 class="h2-center">Billing details</h2>
 
-        <div class="flex checkout-row">
+        <div class="flex input-col">
             <label for="checkout-name" class="checkout-name">
-                <input id="checkout-name" class="checkout-name" type="text" min="6" max="100" placeholder="First name"
+                <input id="checkout-name" class="checkout-name" type="text" min="6" max="100"
+                       placeholder="First name.."
                        required>
             </label>
+        </div>
 
+        <div class="flex input-col">
             <label for="checkout-lname" class="checkout-lname">
-                <input id="checkout-lname" class="checkout-lname" type="text" min="6" max="100" placeholder="Last name"
+                <input id="checkout-lname" class="checkout-lname" type="text" min="6" max="100"
+                       placeholder="Last name.."
                        required>
             </label>
         </div>
 
-        <div class="flex ">
+        <div class="flex input-col">
             <label for="country" class="country">
-                <input id="country" class="country" type="text" min="6" max="100" placeholder="Country" required>
+                <input id="country" class="country" type="text" min="6" max="100" placeholder="Country.." required>
             </label>
         </div>
 
-        <div class="flex ">
+        <div class="flex input-col">
             <label for="city" class="city">
-                <input id="city" class="city" type="text" min="6" max="100" placeholder="City" required>
+                <input id="city" class="city" type="text" min="6" max="100" placeholder="City.." required>
             </label>
         </div>
 
-        <div class="flex ">
+        <div class="flex input-col">
             <label for="address" class="address">
                 <input class="address" id="address" type="text" min="6" max="100" placeholder="Street address.."
                        required>
             </label>
         </div>
 
-        <div class="flex">
+        <div class="flex input-col">
             <label for="postcode" class="postcode">
-                <input class="postcode" id="postcode" type="text" min="6" max="100" placeholder="Postcode" required>
+                <input class="postcode" id="postcode" type="text" min="6" max="100" placeholder="Postcode.." required>
             </label>
         </div>
 
-
-        <div class="flex checkout-row">
+        <div class="flex input-col">
             <label for="phone" class="phone">
-                <input class="phone" id="phone" type="text" min="6" max="100" placeholder="Phone number" required>
+                <input class="phone" id="phone" type="text" min="6" max="100" placeholder="Phone number.." required>
             </label>
+        </div>
 
+        <div class="flex input-col">
             <label for="email" class="email">
-                <input class="email" id="email" type="text" min="6" max="100" placeholder="Email address" required>
+                <input class="email" id="email" type="text" min="6" max="100" placeholder="Email address.." required>
             </label>
         </div>
     </div>
 
-    <div class="row checkout-section">
-        <div class="flex checkout-row order-details">
+
+    <div class=" flex success-box box-card">
+        <h2 class="h2-center">Your order</h2>
+
+        <div class="flex row-success order-details">
             <p><strong>Product</strong></p>
             <p><strong>Total</strong></p>
         </div>
 
-        <div class="flex checkout-row order-details">
+        <div class="flex row-success order-details">
             <p><strong>Skyrim</strong></p>
             <p>199NOK</p>
         </div>
 
-        <div class="flex checkout-row order-details">
+        <div class="flex row-success order-details">
             <p><strong>Subtotal</strong></p>
             <p>199NOK</p>
         </div>
 
-        <div class="flex checkout-row order-details">
+        <div class="flex row-success order-details">
             <p><strong>Total</strong></p>
             <p>199NOK</p>
         </div>
 
-        <div class="flex checkout-row">
+        <div class="flex row-success">
             <h3>Payment options</h3>
         </div>
 
-        <div class="flex checkout-row">
-            <div class="checkout-payment-icons">
-                <i class="fab fa-cc-mastercard"></i>
-                <i class="fab fa-apple-pay"></i>
-                <i class="fab fa-paypal"></i>
-            </div>
+        <div class="flex row-success success-icons">
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-apple-pay"></i>
+            <i class="fab fa-paypal"></i>
         </div>
+    </div>
+</section>
 
-        <p>
-            <a href="success-message.html" class="flex btn btn-primary">Place order</a>
-        </p>
+
+<section class="flex flex-section">
+    <div class=" flex flex-btn-box">
+        <a href="shopping-cart.html" class="flex-btn btn btn-secondary">Cancel</a>
+    </div>
+
+
+    <div class=" flex flex-btn-box">
+        <a href="success-message.html" class=" btn btn-primary">Place order
+            <i class="fas fa-arrow-right"></i>
+        </a>
     </div>
 </section>
 
