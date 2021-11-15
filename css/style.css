@@ -613,21 +613,26 @@ div.shopping-cart-col {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    min-width: 20%;
+    flex-shrink: 1;
 }
 
-input.product-quantity,
-label.product-quantity {
-    height: 50px;
-    width: 60px;
+div.shopping-cart-col .shrink {
+flex-shrink: 2;
 }
 
-.checkout-img img {
+input.product-quantity {
+    height: 30px;
+    width: 40px;
     text-align: center;
-    width: 170px;
+}
+
+div.shopping-cart-col img {
+
 }
 
 
-/* CHECKOUT PAGE */
+/***************** CHECKOUT PAGE *****************/
 section.checkout-section {
     display: flex;
     flex-direction: column;
