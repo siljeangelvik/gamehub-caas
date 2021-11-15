@@ -369,6 +369,7 @@ section.row-game-details div.row-game-card {
 section.form-sections {
     display: flex;
     flex-direction: column;
+
 }
 
 section.form-sections div.row-first-split,
@@ -379,36 +380,29 @@ section.form-sections div.row-second-split {
     box-shadow: -7px -7px 20px 0 #2b2b2b,
     -4px -4px 5px 0 #2b2b3b,
     7px 7px 25px 0 #0001;
+
 }
 
-section.row-split div.form {
+section.form-sections div.form {
     background-color: var(--fgDark);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: stretch;
     border-radius: 0 0 10px 10px;
     margin-top: 10px;
 }
 
 
-section.row-split div.form form div a i {
-    color: var(--textColor-dark);
-    font-size: 2em;
-    padding: 15px;
-}
-
-section.row-split div.row-second-split form ul li {
+section.form-sections div.form form ul,
+section.form-sections div.form form ul li {
     list-style-type: none;
     text-decoration: none;
 }
 
-section form ul li:last-child,
-section form ul li:last-child a {
-    color: var(---btn-textColor);
-    padding: 10px;
-    text-align: right;
-}
-
 div.form-box-login form ul li label {
-    padding: 20px 0 15px 0;
-    display: flex;
+    text-align: center;
+    padding: 20px 20px 15px 30px;
 }
 
 input,
@@ -417,7 +411,7 @@ textarea {
     -4px -4px 5px 0 #2b2b3b,
     7px 7px 25px 0 #0001,
     2px 2px 10px 0 #0006;
-    width: 60%;
+    width: 95%;
     color: var(--textColor-dark);
     border: 1px solid transparent;
     border-radius: 5px;
@@ -429,11 +423,14 @@ textarea {
 
 input:focus,
 textarea:focus {
-    width: 70%;
     box-shadow: -7px -7px 20px 0 #2b2b2b,
     -4px -4px 5px 0 #2b2b3b,
     inset 4px 4px 25px 0 #0001,
     inset 2px 2px 10px 0 #0006;
+}
+
+input:focus::placeholder {
+    color: transparent;
 }
 
 textarea#msg {
@@ -444,10 +441,25 @@ textarea#msg {
 
 button[type="submit"] {
     border: none;
-    padding: 10px;
+    padding: 15px;
+    width: 50%;
     text-decoration: none;
     cursor: pointer;
     background-color: var(--btn-primary);
+}
+
+section.row-split div.form form div a i {
+    color: var(--textColor-dark);
+    font-size: 2em;
+    padding: 20px 15px 40px 15px;
+}
+
+
+section form ul li:last-child,
+section form ul li:last-child a {
+    color: var(---btn-textColor);
+    padding: 10px 3% 0 0;
+    text-align: right;
 }
 
 
