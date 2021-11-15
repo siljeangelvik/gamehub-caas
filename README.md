@@ -10,8 +10,10 @@ Fix the form to be centered on desktop view
 - Game specific pages:
 Make section.flex-c space-between value work.
 
-- Make Account Page
-- Make Checkout and Checkout Success pages
+
+- Account Page: Done - Need more colors
+- Checkout: 
+- Checkout Success: 
 - Make Add to Cart ?
 
 
@@ -27,3 +29,22 @@ RESOURCES <br>
 
 - Back to previous page
 <br> https://www.computerhope.com/issues/ch000317.htm
+
+- How to center content in a div with a set height
+<br> https://stackoverflow.com/questions/2939914/how-do-i-vertically-align-text-in-a-div
+<br> answer: line-height attribute for the account page image
+
+
+- payment method icons
+<br>
+
+mastercard
+<i class="fab fa-cc-mastercard"></i>
+
+apple pay
+<i class="fab fa-apple-pay"></i>
+
+paypal
+<i class="fab fa-paypal"></i>
+
+

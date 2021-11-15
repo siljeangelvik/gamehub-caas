@@ -33,6 +33,10 @@ h1, h2, h3, h5, h6 {
     color: var(--textColorHeading-dark);
 }
 
+div.form-box-login form ul li label {
+    display: flex;
+}
+
 h4 {
     letter-spacing: .1rem;
     font-family: "Roboto Light", sans-serif;
@@ -40,7 +44,9 @@ h4 {
     color: var(--textColorHeading-dark);
 }
 
-footer div a, p {
+footer div a,
+p,
+i {
     color: var(--textColor-dark);
 }
 
@@ -70,9 +76,11 @@ footer div a i, nav li a {
 .btn-secondary {
     border-color: var(--btn-secondary);
     background-color: var(--btn-secondary);
+    color: var(---btn-textColor);
 }
 
 .btn-tertiary {
+    color: var(---btn-textColor);
     border: 1px solid var(--textColor-dark);
     background-color: var(--btn-tertiary);
 }
@@ -80,6 +88,8 @@ footer div a i, nav li a {
 body {
     font-family: "Roboto", sans-serif;
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     padding: 5px 10px;
     color: var(--textColor-dark);
@@ -87,10 +97,7 @@ body {
 }
 
 header,
-section.breadcrumbs-section,
-section#hero,
-section.row,
-section.flex,
+section,
 footer {
     flex: 1 100%;
 }
@@ -107,11 +114,12 @@ header {
     margin: 5px 0;
     display: flex;
     justify-content: space-between;
+    justify-items: baseline;
     align-content: center;
 }
 
 img.logo {
-    height: 72px;
+    height: 70px;
 }
 
 nav {
@@ -132,8 +140,15 @@ nav {
 
 label[for="hamburger-menu"] {
     z-index: 5;
-    font-size: 2em;
-    right: 0;
+    padding: 15px 0 0 0;
+    font-size: 2.5em;
+}
+
+label[for="hamburger-menu"] span {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(---btn-textColor);
 }
 
 label[for="hamburger-menu"]:hover {
@@ -171,7 +186,9 @@ header nav ul li a {
 select 5 first li elements which on hover, change color of direct a-tags
 select all li elements with classname active, set color on direct a-tag
  */
-header nav ul li:nth-child(-n+5):hover > a, header nav ul li.active > a, i.fa-heart {
+header nav ul li:nth-child(-n+5):hover > a,
+header nav ul li.active > a,
+i.icon-red-heart {
     color: var(--btn-primary);
 }
 
@@ -244,13 +261,11 @@ section.row {
 }
 
 section.flex-a,
-section.flex-b,
-section.flex-c {
+section.flex-b {
     display: flex;
     flex-wrap: wrap;
     row-gap: 20px;
 }
-
 
 section.flex-a div.card,
 section.flex-b div.card {
@@ -272,17 +287,17 @@ section.flex div.card div.card-top {
     font-weight: bolder;
 }
 
-section.flex div.card div.card-buttons {
+div.card-buttons {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
 
-section.flex div.card div.card-buttons a:first-child {
+div.card-buttons a:first-child {
     width: 43%;
 }
 
-section.flex div.card div.card-buttons a:last-child {
+div.card-buttons a:last-child {
     width: 53%;
 }
 
@@ -303,9 +318,136 @@ footer div.icons {
     font-size: 1.5em;
 }
 
+footer p a {
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 footer div:last-child {
     text-align: center;
     margin-top: 40px;
+}
+
+/* ACCOUNT PAGE STYLING */
+section.row-account {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--fgDark);
+    box-shadow: -7px -7px 20px 0 #2b2b2b,
+    -4px -4px 5px 0 #2b2b3b,
+    7px 7px 25px 0 #0001,
+    2px 2px 10px 0 #0006;
+}
+
+/**//**//*//**//* GAME SPECIFIC PAGE STYLING *//**//**//*//**/
+section.row-game-details {
+    display: flex;
+    flex-direction: column;
+}
+
+section.row-game-details div.row-game-card div.card-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.row-game-details div.row-game-card div.card-buttons {
+    padding: 20px 0 0 0;
+}
+
+section.row-game-details div.row-game-card {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/**//**//*//**//* FORM PAGES  STYLING *//**//**//*//**/
+/* LOGIN / SIGNUP / CONTACT pages */
+section.form-sections {
+    display: flex;
+    flex-direction: column;
+}
+
+section.form-sections div.row-first-split,
+section.form-sections div.row-second-split {
+    text-align: center;
+    background-color: #1b1b1b;
+    border-radius: 10px 10px 0 0;
+    box-shadow: -7px -7px 20px 0 #2b2b2b,
+    -4px -4px 5px 0 #2b2b3b,
+    7px 7px 25px 0 #0001;
+}
+
+section.row-split div.form {
+    background-color: var(--fgDark);
+    border-radius: 0 0 10px 10px;
+    margin-top: 10px;
+}
+
+
+section.row-split div.form form div a i {
+    color: var(--textColor-dark);
+    font-size: 2em;
+    padding: 15px;
+}
+
+section.row-split div.row-second-split form ul li {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+section form ul li:last-child,
+section form ul li:last-child a {
+    color: var(---btn-textColor);
+    padding: 10px;
+    text-align: right;
+}
+
+div.form-box-login form ul li label {
+    padding: 20px 0 15px 0;
+    display: flex;
+}
+
+input,
+textarea {
+    box-shadow: -7px -7px 20px 0 #2b2b2b,
+    -4px -4px 5px 0 #2b2b3b,
+    7px 7px 25px 0 #0001,
+    2px 2px 10px 0 #0006;
+    width: 60%;
+    color: var(--textColor-dark);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: var(--fgDark);
+    padding: 15px 10px;
+    transition: 0.5s;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    width: 70%;
+    box-shadow: -7px -7px 20px 0 #2b2b2b,
+    -4px -4px 5px 0 #2b2b3b,
+    inset 4px 4px 25px 0 #0001,
+    inset 2px 2px 10px 0 #0006;
+}
+
+textarea#msg {
+    vertical-align: top;
+    height: 15em;
+    resize: none;
+}
+
+button[type="submit"] {
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--btn-primary);
 }
 
 
@@ -347,15 +489,32 @@ footer div:last-child {
         padding: 0;
     }
 
+    footer > div > a > img.logo {
+        height: 92px;
+    }
+
     footer div.icons a {
-        font-size: 1.8rem;
+        display: block;
+        padding: 30px 30px 30px 30px;
+        transition: 0.5s;
+        font-size: 1.05em;
     }
 
     footer div.icons a:hover {
-        font-size: 1.05em;
-        display: block;
+        padding: 20px 30px 20px 30px;
         background: -webkit-linear-gradient(var(--btn-primary), var(--textColor-dark));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+    section.row-game-details {
+        display: flex;
+        flex-direction: row;
+    }
+
+    section.row-game-details div.row-game-card > p {
+        padding-right: 35%;
+    }
+
 }
+
