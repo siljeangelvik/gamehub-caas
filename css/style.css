@@ -658,9 +658,19 @@ div.checkout-section {
     padding: 25px;
 }
 
+div.circle {
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background-color: red;
+}
 div.checkout-row {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+
 }
 
 div.checkout-payment-icons {
@@ -674,9 +684,7 @@ div.checkout-payment-icons i {
     padding: 15px;
 }
 
-div.order-details {
-    justify-content: space-between;
-}
+
 
 
 @media (min-width: 640px) {
